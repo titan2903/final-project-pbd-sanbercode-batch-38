@@ -35,6 +35,57 @@
     JWT_ALGORITHM="HS256"
    ```
 
+## Installation dependency
+
+1. Install `fasapi` framework
+
+    ```bash
+    pip install fastapi
+    ```
+
+2. Install `uvicorn` to work as the server
+
+    ```bash
+    pip install "uvicorn[standard]"
+    ```
+
+3. Install the `python-decouple` module in your Python environment
+
+    ```bash
+    pip install python-decouple
+    ```
+
+4. Install `sqlalchemy` is a popular SQL toolkit and Object-Relational Mapping (ORM) library for Python
+
+    ```bash
+    pip install sqlalchemy
+    ```
+
+5. Install : Instead of installing `psycopg2`, you can install `psycopg2-binary`, which is a pre-built binary package and does not require compilation
+
+    ```bash
+    pip install psycopg2-binary
+    ```
+
+6. Install PostgreSQL development files
+
+   ```bash
+   sudo apt update && sudo apt-get install libpq-dev -y
+   ```
+
+7. Install `psycopg2`, which is a PostgreSQL adapter for Python
+
+    ```bash
+    pip install psycopg2
+    ```
+
+8. Install `passlib` module, which is a Python library for hashing passwords
+
+   ```bash
+   pip install passlib
+
+   ```
+
 ## Running the Server
 
 1. Open terminal in your VS Code.
