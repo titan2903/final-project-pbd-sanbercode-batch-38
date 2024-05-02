@@ -3,16 +3,16 @@ from starlette.responses import JSONResponse
 from models.user import Users
 from dto.dto import ok
 from dto.dto import badRequest
-from transformers.UserTransformer import singleTransformUser
-from transformers.UserTransformer import singleTransformUserLogin
-from transformers.UserTransformer import singleTransformSignJWT
+from entity.UserTransformer import singleTransformUser
+from entity.UserTransformer import singleTransformUserLogin
+from entity.UserTransformer import singleTransformSignJWT
 from database.config import SessionLocal
 from utils.hash_password import get_password_hash
 from utils.verify_password import verify_password
 from middleware.auth_handler import signJWT
 from middleware.auth_handler import get_current_user
 from models.contact import Contacts
-from transformers.UserTransformer import transformUserAndContact
+from entity.UserTransformer import transformUserAndContact
 
 db=SessionLocal()
 

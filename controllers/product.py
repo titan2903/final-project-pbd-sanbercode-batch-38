@@ -1,7 +1,7 @@
 from starlette.responses import JSONResponse
 from dto.dto import ok
 from dto.dto import badRequest
-from transformers.ProductTransformer import transform
+from entity.ProductTransformer import transform
 from models.product import Products
 from database.config import SessionLocal
 
