@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS products (
 	product_name varchar(255) default null,
 	category varchar(255) default null,
 	sub_category varchar(255) default null
-)
+);
 
 CREATE TABLE IF NOT EXISTS users (
 	customer_id serial primary key not null,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS users (
 	state varchar(255) default null,
 	postal varchar(255) default null,
 	password varchar(255) default null
-)
+);
 
 CREATE TABLE IF NOT EXISTS contacts (
 	contact_id INT GENERATED ALWAYS AS identity not null,
@@ -24,4 +24,15 @@ CREATE TABLE IF NOT EXISTS contacts (
    	CONSTRAINT fk_customer
       FOREIGN KEY(customer_id) 
 	  REFERENCES users(customer_id)
-)
+);
+
+
+CREATE TABLE IF NOT EXISTS profiles (
+	profile_id serial primary key not null,
+	image TEXT,
+	username VARCHAR(100),
+	customer_id INT UNIQUE,
+	CONSTRAINT fk_customer
+		FOREIGN KEY (customer_id)
+		REFERENCES users(customer_id)
+);
