@@ -1,10 +1,8 @@
-from database.config import Base
-from sqlalchemy import Column, Integer, String
+from sqlmodel import SQLModel, Field
 
-class Products(Base):
-    __tablename__ = "products"
 
-    product_id = Column(Integer, primary_key=True, index=True)
-    product_name = Column(String(255))
-    category = Column(String(255))
-    sub_category = Column(String(255))
+class Products(SQLModel, table=True):
+    product_id: int = Field(primary_key=True, index=True)
+    product_name: str
+    category: str
+    sub_category: str

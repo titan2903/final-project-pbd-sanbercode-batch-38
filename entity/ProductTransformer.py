@@ -11,5 +11,5 @@ def singleTransformProduct(values):
         "product_id": values.product_id,
         "product_name": values.product_name,
         "category": values.category,
-        "sub_category": values.sub_category
+        "sub_category": values.sub_category,
     }

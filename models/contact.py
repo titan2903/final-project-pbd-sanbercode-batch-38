@@ -1,11 +1,9 @@
-from database.config import Base
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlmodel import SQLModel, Field
 
-class Contacts(Base):
-    __tablename__ = "contacts"
 
-    contact_id = Column(Integer, primary_key=True, index=True)
-    customer_id = Column(Integer, ForeignKey("users.customer_id"))
-    contact_name = Column(String(255))
-    phone = Column(String(255))
-    email = Column(String(255))
+class Contacts(SQLModel, table=True):
+    contact_id: int = Field(primary_key=True, index=True)
+    customer_id: int = Field(foreign_key="users.customer_id")
+    contact_name: str
+    phone: str
+    email: str

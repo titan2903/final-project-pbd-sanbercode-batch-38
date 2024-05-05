@@ -1,12 +1,10 @@
-from database.config import Base
-from sqlalchemy import Column, Integer, String
+from sqlmodel import SQLModel, Field
 
-class Users(Base):
-    __tablename__ = "users"
 
-    customer_id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(255))
-    city = Column(String(255))
-    state = Column(String(255))
-    postal = Column(String(255))
-    password = Column(String(255))
+class Users(SQLModel, table=True):
+    customer_id: int = Field(primary_key=True, index=True)
+    name: str
+    city: str
+    state: str
+    postal: str
+    password: str

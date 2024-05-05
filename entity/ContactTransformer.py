@@ -12,5 +12,5 @@ def singleTransformContact(values):
         "customer_id": values.customer_id,
         "contact_name": values.contact_name,
         "phone": values.phone,
-        "email": values.email
+        "email": values.email,
     }
