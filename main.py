@@ -16,11 +16,27 @@ app.add_middleware(
     allow_credentials=True,
 )
 
-app.include_router(routerUser, prefix="/users", tags=["User Docs"], )
-app.include_router(routerProduct, prefix="/products", tags=["Product Docs!"], )
-app.include_router(routerContact, prefix="/contacts", tags=["Contact Docs!"], )
-app.include_router(routerHealthCheck, prefix="", tags=["Health Check Docs!"], )
+app.include_router(
+    routerUser,
+    prefix="/users",
+    tags=["User Docs"],
+)
+app.include_router(
+    routerProduct,
+    prefix="/products",
+    tags=["Product Docs!"],
+)
+app.include_router(
+    routerContact,
+    prefix="/contacts",
+    tags=["Contact Docs!"],
+)
+app.include_router(
+    routerHealthCheck,
+    prefix="",
+    tags=["Health Check Docs!"],
+)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     uvicorn.run(app)
     app.run(debug=True)
